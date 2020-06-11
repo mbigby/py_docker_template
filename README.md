@@ -4,7 +4,7 @@ Create your project:
 
     sudo docker-compose run web django-admin startproject <PROJECT_NAME> .
 
-Update your database settings in <PROJECT_NAME>/setting.py
+Update your database settings in <PROJECT_NAME>/settings.py
 
     DATABASES = {
         'default': {
