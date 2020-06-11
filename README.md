@@ -2,7 +2,7 @@
 
 Create your project:
 
-    sudo docker-compose run web django-admin startproject <PROJECT_NAME> .
+    docker-compose run web django-admin startproject <PROJECT_NAME> .
 
 Update your database settings in <PROJECT_NAME>/settings.py
 
@@ -17,6 +17,18 @@ Update your database settings in <PROJECT_NAME>/settings.py
         }
     }
 
+Run initial migrations
+
+    docker-compose run web ./manage.py migrate
+
+Create a superuser
+
+    docker-compose run web ./manage.py createsuperuser
+
 Run the server:
 
     docker-compose up
+
+Verify the server is up:
+
+    visit http://localhost:8000/admin
